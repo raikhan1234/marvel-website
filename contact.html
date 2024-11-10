@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Marvel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Marvel Universe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="characters.html">Characters</a></li>
+                <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h1 class="text-center">Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <button type="button" id="resetBtn" class="btn">Reset</button>
+        </form>
+        <div id="formMessage" class="mt-3"></div>
+    </div>
+
+
+    <header>
+        <h1>Marvel Product Store</h1>
+    </header>
+
+    <!-- Filter Section -->
+    <section id="filter-section">
+        <div class="filter-group">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                <option value="action-figures">Action Figures</option>
+                <option value="comics">Comics</option>
+                <option value="apparel">Apparel</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="priceFilter">Price Range:</label>
+            <select id="priceFilter">
+                <option value="all">All</option>
+                <option value="low">Under $15</option>
+                <option value="mid">Under $50</option>
+                <option value="high">Above $50</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Products List -->
+    <section id="products">
+        <div class="product-card" data-category="action-figures" data-price="high">
+            <h3>Spider-Man Action Figure</h3>
+            <p>Price: $55</p>
+        </div>
+        <div class="product-card" data-category="comics" data-price="low">
+            <h3>Avengers Comic</h3>
+            <p>Price: $15</p>
+        </div>
+        <div class="product-card" data-category="apparel" data-price="mid">
+            <h3>Iron Man T-Shirt</h3>
+            <p>Price: $30</p>
+        </div>
+        <div class="product-card" data-category="comics" data-price="low">
+            <h3>Spider-Man Comic</h3>
+            <p>Price: $10</p>
+        </div>
+        <div class="product-card" data-category="action-figures" data-price="mid">
+            <h3>Thor Action Figure</h3>
+            <p>Price: $25</p>
+        </div>
+        <div class="product-card" data-category="apparel" data-price="low">
+            <h3>Hulk Hoodie</h3>
+            <p>Price: $20</p>
+        </div>
+        <div class="product-card" data-category="action-figures" data-price="high">
+            <h3>Captain America Shield</h3>
+            <p>Price: $60</p>
+        </div>
+        <div class="product-card" data-category="comics" data-price="low">
+            <h3>Iron Man Comic</h3>
+            <p>Price: $5</p>
+        </div>
+        <div class="product-card" data-category="apparel" data-price="high">
+            <h3>Doctor Strange Cloak</h3>
+            <p>Price: $70</p>
+        </div>
+    </section>
+
+    <header>
+        <h1>Marvel Product Store</h1>
+    </header>
+
+    <section id="products"></section>
+
+<!-- Add a section for filters -->
+<div class="container mt-4">
+    <h2>Filter Marvel Products</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter" class="form-control">
+                <option value="">All Categories</option>
+                <option value="Comics">Comics</option>
+                <option value="Toys">Toys</option>
+                <option value="Apparel">Apparel</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="priceFilter">Price Range</label>
+            <select id="priceFilter" class="form-control">
+                <option value="">All Prices</option>
+                <option value="0-50">Under $50</option>
+                <option value="50-100">$50 - $100</option>
+                <option value="100-200">$100 - $200</option>
+                <option value="200+">Over $200</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Products Section -->
+<div class="container mt-4">
+    <h2>Marvel Products</h2>
+    <div id="productsList" class="row">
+        <!-- Product items will be displayed here dynamically -->
+    </div>
+</div>
+
+    <script src="path/to/jquery.min.js"></script>
+    <script src="path/to/bootstrap.min.js"></script>
+    <script src="script.js"defer></script>
+    
+</body>
+</html>

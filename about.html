@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Marvel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Marvel Universe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="characters.html">Characters</a></li>
+                <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="content">
+            <h2>About Marvel</h2>
+            <p>Marvel is a media franchise and shared universe centered on a series of superhero films and television series produced by Marvel Studios.</p>
+            <button id="readMoreBtn" class="btn">Read More</button>
+            <div id="moreContent" class="hidden">
+                <h3>Marvel Characters</h3>
+                <p>Some of the most beloved characters include Spider-Man, Iron Man, Thor, Captain America, and many more. Each character has a unique story and journey within the Marvel Cinematic Universe (MCU).</p>
+                <h3>Marvel Comics</h3>
+                <p>The Marvel comic book universe is vast, with thousands of issues published since the 1930s. Iconic series like "The Amazing Spider-Man" and "The Avengers" have captivated audiences for generations.</p>
+            </div>
+        </section>
+
+        
+    </main>
+
+
+    <div class="container mt-5">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">What is the Marvel Universe?</button>
+                <div class="faq-answer">
+                    <p>The Marvel Universe is a fictional universe where the stories of Marvel Comics are set. It features numerous superheroes, villains, and complex storylines.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Who are the Avengers?</button>
+                <div class="faq-answer">
+                    <p>The Avengers are a team of superheroes in the Marvel Universe who come together to fight threats too large for any single hero to handle.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is S.H.I.E.L.D.?</button>
+                <div class="faq-answer">
+                    <p>S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics Division) is a fictional espionage and law-enforcement agency in the Marvel Universe.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Who is Iron Man?</button>
+                <div class="faq-answer">
+                    <p>Iron Man, also known as Tony Stark, is a billionaire inventor and industrialist who becomes a superhero after creating a powered exoskeleton suit.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is Wakanda?</button>
+                <div class="faq-answer">
+                    <p>Wakanda is a fictional African nation in the Marvel Universe. It is technologically advanced and home to the superhero Black Panther.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Who is Thanos?</button>
+                <div class="faq-answer">
+                    <p>Thanos is a powerful villain in the Marvel Universe, known for his quest to collect all six Infinity Stones to achieve ultimate power.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What are the Infinity Stones?</button>
+                <div class="faq-answer">
+                    <p>The Infinity Stones are six powerful gems that each grant unique abilities. They include the Space, Mind, Reality, Power, Time, and Soul Stones.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is the Multiverse in Marvel?</button>
+                <div class="faq-answer">
+                    <p>The Multiverse in Marvel refers to the concept of multiple parallel universes where alternate versions of characters and events exist.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Who is Spider-Man?</button>
+                <div class="faq-answer">
+                    <p>Spider-Man, also known as Peter Parker, is a young superhero with spider-like abilities, known for his agility, web-slinging, and sense of responsibility.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is Doctor Strange's role in the Marvel Universe?</button>
+                <div class="faq-answer">
+                    <p>Doctor Strange is a master of the mystic arts, protecting the world from magical and interdimensional threats as the Sorcerer Supreme.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="openFormBtn" class="btn btn-primary">Subscribe / Contact Us</button>
+
+    <!-- Popup Form -->
+    <div id="popupForm" class="popup-form-overlay">
+        <div class="popup-form-content">
+            <span id="closeFormBtn" class="close-btn">&times;</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-control" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" required>
+
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"defer></script>
+</body>
+</html>
