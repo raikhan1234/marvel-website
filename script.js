@@ -513,3 +513,59 @@ document.getElementById("buttonID").addEventListener("click", () => {
     sound.play();
 });
 
+// Validate email and password format
+function validateForm(email, password) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    if (!emailPattern.test(email)) {
+        alert('Invalid email format.');
+        return false;
+    }
+
+    if (!passwordPattern.test(password)) {
+        alert('Password must be at least 8 characters long and contain both letters and numbers.');
+        return false;
+    }
+
+    return true;
+}
+
+// Sign Up function
+function signUp() {
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    if (validateForm(email, password)) {
+        localStorage.setItem('user', JSON.stringify({ name, email, password }));
+        alert('Sign up successful! You can now log in.');
+    }
+}
+
+// Log In function
+function logIn() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (storedUser && validateForm(email, password) && storedUser.email === email && storedUser.password === password) {
+        document.getElementById('profileName').innerText = storedUser.name;
+        document.getElementById('profileEmail').innerText = storedUser.email;
+        document.getElementById('profilePage').style.display = 'block';
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signupForm').style.display = 'none';
+    } else {
+        alert('Incorrect email or password.');
+    }
+}
+
+// Log Out function
+function logOut() {
+    document.getElementById('profilePage').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('signupForm').style.display = 'block';
+}
+
+
