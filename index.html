@@ -56,7 +56,7 @@
             <div class="col-lg-6">
                 <h2>Featured Characters</h2>
                 <div class="card">
-                    <img src="/Users/macbook/Downloads/cap amer.jpeg" class="card-img-top" alt="Character 1">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/27/23/59/capitanamerica-2688069_1280.jpg" class="card-img-top" alt="Character 1">
                     <div class="card-body">
                         <h5 class="card-title">Captian America</h5>
                         <p class="card-text">Captain America's civilian identity is Steven "Steve" Rogers, a frail man enhanced to the peak of human physical perfection by an experimental "super-soldier serum" after joining the United States Army to aid the country's efforts in World War II.</p>
@@ -157,19 +157,32 @@
         <div id="userProfile" class="user-profile"></div>
     </nav>
 
-    <div class="container">
-        <h1>Welcome to the Marvel Universe</h1>
 
-        <!-- Login Form -->
-        <div class="auth-container" id="authContainer">
-            <form id="loginForm">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">Log In</button>
-            </form>
-            <button id="logoutBtn" style="display:none;">Log Out</button>
-        </div>
-        
+
+<!-- Sign Up Form -->
+    <div id="signupForm">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button onclick="signUp()">Sign Up</button>
+    </div>
+
+    <!-- Log In Form -->
+    <div id="loginForm">
+        <h2>Log In</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button onclick="logIn()">Log In</button>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profilePage" style="display: none;">
+        <h2>Welcome, <span id="profileName"></span></h2>
+        <p>Email: <span id="profileEmail"></span></p>
+        <button onclick="logOut()">Log Out</button>
+    </div>
+
 
         
 
